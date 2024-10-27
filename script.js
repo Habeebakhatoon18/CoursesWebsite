@@ -3,8 +3,12 @@ let navLinks = document.querySelector(".nav-links");
 
 
 hamburger.addEventListener("click",()=>{
-    console.log("start");
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
-    console.log("hey")
+})
+document.querySelectorAll(".nav-item").forEach(n =>{
+    n.addEventListener("click",()=>{
+        hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+    })
 })
